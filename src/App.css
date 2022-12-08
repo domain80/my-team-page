@@ -3,18 +3,32 @@
 	margin-inline: auto;
 
 	display: grid;
-	gap: 8rem;
-	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 6rem;
+	row-gap: 8rem;
+	grid-template-columns: repeat(2, 1fr);
 }
-
-.user:nth-child(3n + 2) {
+.user:nth-child(2n) {
 	position: relative;
 	top: 6rem;
+}
+
+@media screen and (min-width: 720px) {
+	.all-members {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.user:nth-child(2n) {
+		position: static;
+	}
+	.user:nth-child(3n + 2) {
+		position: relative;
+		top: 6rem;
+	}
 }
 
 .App {
 	max-width: 1080px;
 	margin-inline: auto;
+	padding: 2rem;
 }
 
 * {
@@ -23,10 +37,11 @@
 	box-sizing: border-box;
 }
 header {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	align-items: flex-start;
 	justify-content: start;
-	gap: 16rem;
+	gap: 3rem;
 	margin: 2rem auto;
 }
 
