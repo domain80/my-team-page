@@ -1,0 +1,40 @@
+.all-members {
+	margin-top: 8rem;
+	margin-inline: auto;
+
+	display: grid;
+	gap: 8rem;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.user:nth-child(3n + 2) {
+	position: relative;
+	top: 6rem;
+}
+
+.App {
+	max-width: 1080px;
+	margin-inline: auto;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: start;
+	gap: 16rem;
+	margin: 2rem auto;
+}
+
+header h4 {
+	font-size: 1.2rem;
+	margin-bottom: 0.4rem;
+}
+header article {
+	font-family: "Poppins", sans-serif;
+	max-width: 40ch;
+}
