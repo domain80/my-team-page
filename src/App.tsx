@@ -3,23 +3,33 @@ import Member from "./components/MemberComponent/Member";
 
 function App() {
 	return (
-		<div className="App">
-			<header>
-				<h1>The creative crew</h1>
-				<article>
-					<h4>Who are we</h4>
-					<p>
-						We are team of creatively diverse, driven, innovative individuals working in various
-						locations from the world.
-					</p>
-				</article>
-			</header>
-			<div className="all-members">
-				{membersData.map((member, idx) => {
-					return <Member key={idx} {...member} />;
-				})}
+		<>
+			<div className="App">
+				<header>
+					<h1>The creative crew</h1>
+					<article>
+						<h4>Who are we</h4>
+						<p>
+							We are team of creatively diverse, driven, innovative individuals
+							working in various locations from the world.
+						</p>
+					</article>
+				</header>
+				<div className="all-members">
+					{membersData.map((member, idx) => {
+						return (
+							<Member
+								key={idx}
+								{...member}
+							/>
+						);
+					})}
+				</div>
 			</div>
-		</div>
+			<footer>
+				created by <a href="github.com/1jack80">1jack80</a> - devChallenges.io{" "}
+			</footer>
+		</>
 	);
 }
 
